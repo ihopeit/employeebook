@@ -1,20 +1,23 @@
+## æ„å»ºé•œåƒ
+æ„å»ºä¹‹å‰ç™»é™† docker hub
 
-## ¹¹½¨¾µÏñ
-¹¹½¨Ö®Ç°µÇÂ½ docker hub
-docker login
-docker build  -t ihopeit/employeebook-base:0.8 .
+  * docker login
+  * docker build  -t ihopeit/employeebook-base:0.8 .
 
 
-½»»¥ÔËĞĞ: 
-docker run -it --rm -p 8000:8000 --entrypoint /bin/sh ihopeit/employeebook-base:0.8
+äº¤äº’è¿è¡Œ:
 
-## Ê¹ÓÃ¾µÏñ¿ìËÙ´î½¨¿ª·¢»·¾³
-³¡¾°/ÎÊÌâ£º
-¿ª·¢½×¶Î£¬´úÂëÆµ·±¸Ä¶¯£¬Ã¿´Î¸Ä¶¯ÖØĞÂ´ò¾µÏñĞ§ÂÊµÍ£¬Ï£Íû´úÂë¸Ä¶¯¿ÉÒÔÖ±½ÓÔÚÔËĞĞµÄÈİÆ÷ÖĞÌåÏÖ³öÀ´¡£
+* docker run -it --rm -p 8000:8000 --entrypoint /bin/sh ihopeit/employeebook-base:0.8
 
-½â¾ö·½°¸£º ¿ª·¢»·¾³£¬ Ö¸¶¨±¾µØÔ´ÂëÄ¿Â¼
-docker run -it --rm -p 8000:8000 -v "$(pwd)":/data/employeebook ihopeit/employeebook-base:0.8
+## ä½¿ç”¨é•œåƒå¿«é€Ÿæ­å»ºå¼€å‘ç¯å¢ƒ
+åœºæ™¯/é—®é¢˜ï¼š
+* å¼€å‘é˜¶æ®µï¼Œä»£ç é¢‘ç¹æ”¹åŠ¨ï¼Œæ¯æ¬¡æ”¹åŠ¨é‡æ–°æ‰“é•œåƒæ•ˆç‡ä½ï¼Œå¸Œæœ›ä»£ç æ”¹åŠ¨å¯ä»¥ç›´æ¥åœ¨è¿è¡Œçš„å®¹å™¨ä¸­ä½“ç°å‡ºæ¥ã€‚
 
-Ö¸¶¨¼ÓÔØÔ´Âë && »·¾³±äÁ¿£º 
-docker run --rm -p 8000:8000 -v "$(pwd)":/data/employeebook --env server_params="--settings=employeebook.localSettings" ihopeit/employeebook-base:0.8
 
+è§£å†³æ–¹æ¡ˆï¼š 
+* å¼€å‘ç¯å¢ƒï¼Œ æŒ‡å®šæœ¬åœ°æºç ç›®å½•
+* docker run -it --rm -p 8000:8000 -v "$(pwd)":/data/employeebook ihopeit/employeebook-base:0.8
+
+æŒ‡å®šåŠ è½½æºç  && ç¯å¢ƒå˜é‡ï¼š
+
+* docker run --rm -p 8000:8000 -v "$(pwd)":/data/employeebook --env server_params="--settings=employeebook.localSettings" ihopeit/employeebook-base:0.8
