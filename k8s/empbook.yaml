@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: employeebook-web
+  template:
+    metadata:
+      labels:
+        app: employeebook-web
+    spec:
+      containers:
+      - name: employeebook
+        image: ihopeit/employeebook-base:0.8
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: employeebook-entrypoint
+  namespace: default
+spec:
+  type: NodePort
+  selector:
+    app: employeebook-web
+  ports:
+  - name: "8000"
+    port: 8000
+    targetPort: 8000
