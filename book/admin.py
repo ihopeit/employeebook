@@ -14,4 +14,4 @@ class EmployeeAdmin(admin.ModelAdmin):
 
     search_fields = ('empno','name','email','mobile', 'dept1',)
 
-admin.site.register(Employee)
+admin.site.register(Employee, EmployeeAdmin)
